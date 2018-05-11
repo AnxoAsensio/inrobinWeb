@@ -10,12 +10,12 @@
 <header style = "position:relative">
       <div id="logo" class="menuUp" >
         <h1>
-          <a style="text-decoration: none" href="index.html">
+          <a style="text-decoration: none" href="index.php">
               <img id="navToggle" class="smicon" src="logo/logo.png" style="width: 200px;margin-top:7%">
           </a>
         </h1>
         <div id="navToggle" style="margin-top:2%;margin-right:3%">
-          <a href="index.html"><img id="menu" src="images/menu.png" style="margin-top:15%;margin-right:3%;width: 100px;"></a>
+          <a href="index.php"><img id="menu" src="images/menu.png" style="margin-top:15%;margin-right:3%;width: 100px;"></a>
         </div>
       </div>
 
