@@ -86,8 +86,8 @@
           if (preg_match($pattern, $emailText) === 1) {
 
             // Get credentials
-            $myfile = fopen("/var/www/html/bd.txt", "r+") or die("Unable to open file!");
-            $servername = "localhost";
+            $myfile = fopen("/kunden/homepages/41/d563189338/htdocs/mysql/bd.txt", "r+") or die("Unable to open file!");
+            $servername = trim(fgets($myfile));
             $username = trim(fgets($myfile));
             $password = trim(fgets($myfile));
             $dbname = trim(fgets($myfile));;
