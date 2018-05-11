@@ -260,7 +260,7 @@
 </div>
 
 <footer>
-    <a href="index.html" style="padding: 0 100% 0 6%;width:100%;">
+    <a href="index.php" style="padding: 0 100% 0 6%;width:100%;">
         <img src="logo/logo.png" alt="Inrobin logo"  style="height:30px;margin-bottom: -0%;">
     </a>
 
