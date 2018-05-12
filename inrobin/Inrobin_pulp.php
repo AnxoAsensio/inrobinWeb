@@ -29,7 +29,7 @@
                     <nav style="width:134px;margin-right:30%;">
                         <ul>
                             <li><a href="Inrobin_industries.html">Overview</a></li>
-                            <li><a href="Inrobin_pulp.html">Biorefinery</a></li>
+                            <li><a href="Inrobin_pulp.php">Biorefinery</a></li>
                         </ul>
                     </nav>
                 </li>
@@ -160,17 +160,69 @@
 
 </div>
 
-<div class="femte" style="height:100%;text-align: center;">
+<div id="quota "name="quota" class="femte" style="height:100%;text-align: center;">
 
 
     <p class="subtitle" style="padding-bottom: 5%;">
         Get a quota for your machinery now
     </p>
 
-    <form>
-        <input type="text" id="email" name="email" placeholder="name@company.com">
-        <input type="submit" value="Get started" class="startbutton">
+    <form name="emailform" id="emailform" method="post">
+        <input type="text" name="emailtext" placeholder="name@company.com" id="email" class ="email">
+        <input type="button" value="Get started" onsubmit = 'saveForm()' class="startbutton" name="submit" >
     </form>
+
+     <!--THIS IS FOR SAVE FORM EMAILS-->
+     <script language="javascript" type="text/javascript">
+         function saveForm() {
+               $('#emailform').submit();
+          }
+     </script>
+
+     <?php
+      function saveEmail() {
+
+          $emailText = $_POST["emailtext"];
+          $pattern ='/^(?!(?:(?:\\x22?\\x5C[\\x00-\\x7E]\\x22?)|(?:\\x22?[^\\x5C\\x22]\\x22?)){255,})(?!(?:(?:\\x22?\\x5C[\\x00-\\x7E]\\x22?)|(?:\\x22?[^\\x5C\\x22]\\x22?)){65,}@)(?:(?:[\\x21\\x23-\\x27\\x2A\\x2B\\x2D\\x2F-\\x39\\x3D\\x3F\\x5E-\\x7E]+)|(?:\\x22(?:[\\x01-\\x08\\x0B\\x0C\\x0E-\\x1F\\x21\\x23-\\x5B\\x5D-\\x7F]|(?:\\x5C[\\x00-\\x7F]))*\\x22))(?:\\.(?:(?:[\\x21\\x23-\\x27\\x2A\\x2B\\x2D\\x2F-\\x39\\x3D\\x3F\\x5E-\\x7E]+)|(?:\\x22(?:[\\x01-\\x08\\x0B\\x0C\\x0E-\\x1F\\x21\\x23-\\x5B\\x5D-\\x7F]|(?:\\x5C[\\x00-\\x7F]))*\\x22)))*@(?:(?:(?!.*[^.]{64,})(?:(?:(?:xn--)?[a-z0-9]+(?:-+[a-z0-9]+)*\\.){1,126}){1,}(?:(?:[a-z][a-z0-9]*)|(?:(?:xn--)[a-z0-9]+))(?:-+[a-z0-9]+)*)|(?:\\[(?:(?:IPv6:(?:(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){7})|(?:(?!(?:.*[a-f0-9][:\\]]){7,})(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){0,5})?::(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){0,5})?)))|(?:(?:IPv6:(?:(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){5}:)|(?:(?!(?:.*[a-f0-9]:){5,})(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){0,3})?::(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){0,3}:)?)))?(?:(?:25[0-5])|(?:2[0-4][0-9])|(?:1[0-9]{2})|(?:[1-9]?[0-9]))(?:\\.(?:(?:25[0-5])|(?:2[0-4][0-9])|(?:1[0-9]{2})|(?:[1-9]?[0-9]))){3}))\\]))$/iD';
+          //pattern to validate FORMAT email by Michael Rushton
+
+          if (preg_match($pattern, $emailText) === 1) {
+
+            // Get credentials
+            $myfile = fopen("/kunden/homepages/41/d563189338/htdocs/mysql/bd.txt", "r+") or die("Unable to open file!");
+            $servername = trim(fgets($myfile));
+            $username = trim(fgets($myfile));
+            $password = trim(fgets($myfile));
+            $dbname = trim(fgets($myfile));
+            fclose($myfile);
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+               echo ("Connection failed: " . $conn->connect_error);
+            }
+
+            $sql = "INSERT INTO emails (email) VALUES ('" . $emailText . "');";
+
+            if ($conn->query($sql) === TRUE) {
+                echo '<p class="textboxtop" style = "margin-top: -15%;padding-left:1%"> New email added succesfully</p>';
+            } else {
+                echo '<p class="textboxtop" style = "margin-top: -15%;padding-left:1%"> Error: ' . $sql . '<br>' . $conn->error. '</p>';
+            }
+
+            $conn->close();
+          } else {
+            echo '<p class="textboxtop" style = "margin-top: -15%;padding-left:1%"> Error: invalid email address </p>';
+          }
+          return false;
+      }
+
+      if(isset($_POST['submit'])) {
+        saveEmail();
+      }
+    ?>
 
 
 </div>

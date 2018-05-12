@@ -137,7 +137,7 @@ img.smicon {
 
 
 .dropdown3 {
-    margin: 5px 5px 20px 5px;
+    margin: 1px 0px 0px 0px;
     position: relative;
     display: inline-block;
     border-color: rgb(240, 75, 50);
@@ -150,10 +150,10 @@ img.smicon {
 .dropdown3:hover{background-color: rgb(240, 75, 50);}
 
 .dropdown3 a {
-    padding-top: 10px;
+    padding-top: 0px;
     padding-right: 10px;
     padding-left: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     color: rgb(240, 75, 50);
     text-decoration: none;
     display: inline-block;
@@ -785,7 +785,7 @@ button:focus {outline:0;}
 }
 
 li {
-    margin: 4px 4px 0px 4px;
+    margin: 0px 0px 0px 0px;
 }
 
 .slider {
@@ -809,6 +809,9 @@ li {
 /* MINIMIZE */
 p {
     padding: 0 0 20px;
+}
+p2 {
+    padding: 0 0 0px;
 }
 
 #more-button{border-style:none;background:none;font:16px Serif;color:blue;margin: 0 0 10px 0;}
@@ -914,6 +917,7 @@ header {
             header nav > ul > li {
                 border-bottom: 1px dotted rgba(0,0,0,.1);
                 position: relative;
+                margin-top: 1.5%;
             }
 
                 header nav > ul > li:last-of-type {
@@ -978,7 +982,7 @@ header {
     header {
         background-color: white;
         flex-direction: row;
-        line-height: 70px;
+        line-height: 40px;
         padding: 0 3rem;
         position: fixed;
         text-align: left;

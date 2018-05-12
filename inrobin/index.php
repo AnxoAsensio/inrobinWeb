@@ -26,7 +26,7 @@
                   <nav style="width:134px;margin-right:30%;">
                       <ul>
                           <li><a href="Inrobin_industries.html">Overview</a></li>
-                          <li><a href="Inrobin_pulp.html">Biorefinery</a></li>
+                          <li><a href="Inrobin_pulp.php">Biorefinery</a></li>
                       </ul>
                   </nav>
               </li>
@@ -54,7 +54,7 @@
                   </nav>
               </li>
               <li><a href="Inrobin_contact.html">Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-              <li><a class="orangetextbox" href="http://dashboard.inrobin.com">Get started</a></li>
+              <li style = "margin-top: 1.2%;"><div class="dropdown3" ><a  href="http://dashboard.inrobin.com">Get started</a></div></li>
           </ul>
       </nav>
   </header>
@@ -90,7 +90,7 @@
             $servername = trim(fgets($myfile));
             $username = trim(fgets($myfile));
             $password = trim(fgets($myfile));
-            $dbname = trim(fgets($myfile));;
+            $dbname = trim(fgets($myfile));
             fclose($myfile);
 
             // Create connection
