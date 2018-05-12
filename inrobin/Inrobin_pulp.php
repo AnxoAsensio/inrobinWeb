@@ -169,7 +169,7 @@
 
     <form name="emailform" id="emailform" method="post">
         <input type="text" name="emailtext" placeholder="name@company.com" id="email" class ="email">
-        <input type="button" value="Get started" onsubmit = 'saveForm()' class="startbutton" name="submit" >
+        <input type="button" value="Get started" onClick= 'saveForm()' class="startbutton" name="submit" >
     </form>
 
      <!--THIS IS FOR SAVE FORM EMAILS-->
