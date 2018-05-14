@@ -514,6 +514,15 @@ img.smicon {
     overflow: hidden;
 
 }
+.fjerde2 {
+    padding: 6%;
+    z-index: 5;
+    background-color: rgb(0, 90, 90);
+    background-size: 100%;
+    height:100%;
+    overflow: hidden;
+
+}
 
 .femte {
     padding: 10%;

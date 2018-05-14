@@ -213,7 +213,7 @@
 
             $conn->close();
           } else {
-            echo '<p class="textboxtop" style = "margin-top: -15%;padding-left:1%"> Error: invalid email address </p>';
+            echo '<p class="textboxtop" style = "margin-top: -15%;"> Error: invalid email address </p>';
           }
           return false;
       }
