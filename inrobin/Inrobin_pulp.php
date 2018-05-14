@@ -10,7 +10,7 @@
 
 
 
-  <header>
+  <header style = "position:relative">
         <div id="logo" class="menuUp" >
           <h1>
             <a style="text-decoration: none" href="index.php">
@@ -25,7 +25,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="Inrobin_industries.html">Industries <span class="toggle">Expand</span><span class="caret"></span></a>
+                    <a href="Inrobin_industries">Industries <span class="toggle">Expand</span><span class="caret"></span></a>
                     <nav style="width:134px;margin-right:30%;">
                         <ul>
                             <li><a href="Inrobin_industries.html">Overview</a></li>
@@ -57,11 +57,10 @@
                     </nav>
                 </li>
                 <li><a href="Inrobin_contact.html">Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                <li><a class="orangetextbox" href="http://dashboard.inrobin.com">Get started</a></li>
+                <li style = "margin-top: 1.2%;"><div class="dropdown3" ><a  href="http://dashboard.inrobin.com">Get started</a></div></li>
             </ul>
         </nav>
     </header>
-
 
 <div class="femtePulp" style="background-image: url(images/biorefinery.jpg);background-repeat: no-repeat;">
 
@@ -167,9 +166,9 @@
         Get a quota for your machinery now
     </p>
 
-    <form name="emailform" id="emailform" method="post">
+    <form name="emailform" id="emailform" method="post" onsubmit = 'saveForm()'>
         <input type="text" name="emailtext" placeholder="name@company.com" id="email" class ="email">
-        <input type="button" value="Get started" onClick= 'saveForm()' class="startbutton" name="submit" >
+        <input type="submit" value="Get started"  class="startbutton" name="submit" >
     </form>
 
      <!--THIS IS FOR SAVE FORM EMAILS-->
