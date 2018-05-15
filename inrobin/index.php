@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Inrobin Industry</title>
     <link rel="stylesheet" type="text/css" href="inrobinstyle.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/icons/favicon.ico" />
 </head>
 <body>
 
-<header style = "position:relative">
+<header>
       <div id="logo" class="menuUp" >
         <h1>
           <a style="text-decoration: none" href="index.php">
@@ -59,7 +60,7 @@
       </nav>
   </header>
 
-<div class="forste" name="top" style="background-image: url(images/net4.jpg);background-repeat: no-repeat; position:relative">
+<div class="forste" name="top" style="background-image: url(images/net4.jpg);background-repeat: no-repeat;">
 
     <p class="title" style="line-height: 1.1;margin-top:0%;">
         Predict<br>
@@ -129,7 +130,7 @@
 </div>
 
  <!--THIS IS THE FOUR COLOURED BLOCKS-->
-<div style="overflow: visible; position:relative;" id="blocks">
+<div style="overflow: visible;" id="blocks">
 
 
     <div class="row" style="height: 400px;">
@@ -246,7 +247,7 @@
 </div>
 
 <!--THIS IS JOIN THE TEAM-->
-<div class="tredje" style="text-align: center;height:100%;width:100%; position:relative">
+<div class="tredje" style="text-align: center;height:100%;width:100%;">
     <p class="negsmalltitle" style="width:100%;padding: 0 0 5% 0">
      Join the team
     </p>

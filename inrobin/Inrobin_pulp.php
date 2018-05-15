@@ -10,7 +10,7 @@
 
 
 
-  <header style = "position:relative">
+  <header>
         <div id="logo" class="menuUp" >
           <h1>
             <a style="text-decoration: none" href="index.php">
@@ -166,10 +166,15 @@
         Get a quota for your machinery now
     </p>
 
-    <form name="emailform" id="emailform" method="post" onsubmit = 'saveForm()'>
+    <form name="emailform" id="emailform" method="post">
         <input type="text" name="emailtext" placeholder="name@company.com" id="email" class ="email">
-        <input type="submit" value="Get started"  class="startbutton" name="submit" >
+        <input type="submit" value="Get started"   class="startbutton" name="submit" >
     </form>
+
+    <!--<form method="POST">
+        <input type="text" name="emailtext" placeholder="name@company.com" id="email" class ="email">
+        <button type="button" name="save" onclick="saveEmail(); return false">Get started</button>
+    </form>-->
 
      <!--THIS IS FOR SAVE FORM EMAILS-->
      <script language="javascript" type="text/javascript">
@@ -213,7 +218,7 @@
 
             $conn->close();
           } else {
-            echo '<p class="textboxtop" style = "margin-top: -15%;"> Error: invalid email address </p>';
+            echo '<p class="textboxtop" style = ""> Error: invalid email address </p>';
           }
           return false;
       }
