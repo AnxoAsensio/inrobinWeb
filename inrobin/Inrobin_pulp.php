@@ -15,18 +15,18 @@
         <div id="logo" class="menuUp" >
           <h1>
             <a style="text-decoration: none" href="index.php">
-                <img id="navToggle" class="smicon" src="logo/logo.png" style="width: 200px;margin-top:7%">
+                <img id="navToggle" class="smicon" src="logo/logo.png" style="width: 160px;margin-top:8%;margin-bottom:1%;">
             </a>
           </h1>
           <div id="navToggle" style="margin-top:2%;margin-right:3%">
-            <a href="index.php"><img id="menu" src="images/menu.png" style="margin-top:15%;margin-right:3%;width: 100px;"></a>
+            <a href="index.php"><img id="menu" src="images/menu.png" style="margin-top:0%;margin-right:3%;width: 100px;"></a>
           </div>
         </div>
 
         <nav>
             <ul>
                 <li>
-                    <a href="Inrobin_industries">Industries <span class="toggle">Expand</span><span class="caret"></span></a>
+                    <a href="Inrobin_industries.html">Industries <span class="toggle">Expand</span><span class="caret"></span></a>
                     <nav style="width:134px;margin-right:30%;">
                         <ul>
                             <li><a href="Inrobin_industries.html">Overview</a></li>
@@ -58,10 +58,12 @@
                     </nav>
                 </li>
                 <li><a href="Inrobin_contact.html">Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                <li style = "margin-top: 1.2%;"><div class="dropdown3" ><a  href="http://dashboard.inrobin.com">Get started</a></div></li>
+                <li style = "margin-top: 1.1%;margin-bottom: 1%"><div class="dropdown3" ><a  href="http://dashboard.inrobin.com">Get started</a></div></li>
             </ul>
         </nav>
     </header>
+
+
 
 <div class="femtePulp" style="background-image: url(images/biorefinery.jpg);background-repeat: no-repeat;">
 
@@ -83,7 +85,7 @@
 </div>
 
 <div class="fjerde" id="blocks">
-    <p class="negtextbox" style="width: 50%;">
+    <p class="negtextbox" style="width: 50%;float:left;">
         <!--Potential losses due to business interruption or machinery breakdown create-->
         <!--high insurance costs for manufacturers.-->
 
@@ -110,7 +112,7 @@
 
     </p>
 
-    <img src="images/industrial4.jpeg" style="width: 30%;margin-left:9%">
+    <img src="images/industrial4.jpeg" style="width: 45%;padding:3% 0 10% 15%;float:left;">
 
 
 </div>
@@ -365,7 +367,7 @@ $(document).ready(function(){
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior
-      event.preventDefault();
+      //event.preventDefault();
 
       // Store hash
       var hash = this.hash;
