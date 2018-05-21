@@ -173,17 +173,17 @@
         <input type="text" name="emailtext" placeholder="name@company.com" id="email" class ="email">
         <input type="submit" value="Get started"   class="startbutton" name="submit" >
     </form>
-
-    <!--<form method="POST">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <form name="emailform" id="emailform">
         <input type="text" name="emailtext" placeholder="name@company.com" id="email" class ="email">
-        <button type="button" name="save" onclick="saveEmail(); return false">Get started</button>
+        <input type = "button" id="emailsubmit" name="save" class="startbutton">Get started</input>
     </form>-->
 
      <!--THIS IS FOR SAVE FORM EMAILS-->
-     <script language="javascript" type="text/javascript">
-         function saveForm() {
-               $('#emailform').submit();
-          }
+     <script>
+     $('#emailform').click(function() {
+          e.preventDefault();
+     });
      </script>
 
      <?php
